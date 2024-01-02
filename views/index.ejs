@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+  <div id="main">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img id="nav-img" src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt=""><span class="fs-4 text-danger">Pinterest</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " href="#">Today</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Watch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Explore</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <button class="btn btn-outline-success" type="submit">About</button>
+            <button class="btn btn-outline-success" type="submit">Business</button>
+            <button class="btn btn-outline-success" type="submit">Blog</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div id="hero">
+      <div id="left">
+        <div id="l-top">
+          <a href="/ragisterpage" class="upbtn text-decoration-none text-black"> Sign in</a>    
+        </div>
+        <div id="l-main">
+          <h1>Log in to <br>get your <br>ideas.<span id="blink">.</span></h1>
+        </div>
+      </div>
+        <div class="container col-7" id="reight">
+          <div class="boxx">
+            <div class="content">
+              <!--pinterest logo-->
+              <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+              <p class="header">Wellcome to pinterest</p>
+              <% if(error.length > 0){ %>
+                <p class="alert alert-danger" ><%= error %></p>
+              <% } %>
+              <form action="/login" method="post">
+              <input type="text" name="username" placeholder="username" class="detail"/><br/>
+              <input type="password" name="password" placeholder="Password" class="detail"/>
+      
+              <h4>Forgot your password?</h4>
+      
+              <button type="submit" class="btn int">Log in</button>
+            </form>
+              <p class="or">OR</p>
+              <button class="btn fbk">
+                <i
+                  class="fab fa-facebook fa-lg"
+                  style="color: white; padding-right: 10px"
+                ></i
+                ><a href="#">Continue with Facebook</a></button
+              ><br />
+              <button class="btn ggl">
+                <i
+                  class="fab fa-google"
+                  style="color: rgb(11, 241, 22); padding-right: 10px"
+                ></i
+                ><a href="#">Continue with Google</a>
+              </button>
+      
+              <footer>
+                <hr />
+                <p>
+                  By continuing, you agree to Pinterest's
+                  <b>Terms of Service, Privacy policy.</b>
+                </p>
+                
+                <!-- <p>Not on Pinterest yet? Sign up</p> -->
+              </footer>
+            </div>
+          </div>
+ 
+      
+          
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
